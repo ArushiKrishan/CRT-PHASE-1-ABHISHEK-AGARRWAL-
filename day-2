@@ -136,6 +136,34 @@ int main() {
                 cout << "Enter a valid choice...";
             }
         }
+
+ // problem-7 Nested if else condition
+        // ques- smart home lighting
+        // day-- motion (yes/no) -- light off
+        // night -- motion(yes--100%/no--10%)
+        
+        #include <iostream>
+        using namespace std;
+        
+        int main() {
+            string dayOrNight;
+            bool motionDetected;
+            
+            cout << "is ot day or night?...";
+            cin >> dayOrNight;
+            cout << "Is motion detected?...";
+            cin >> motionDetected;
+            
+            if(dayOrNight == "Night" || dayOrNight == "night") {
+                if(motionDetected) {
+                    cout << "Turnn on the LED with 100% brightness";
+                } else {
+                    cout << "Turn on the LED with 10% brightness";
+                }
+            } else {
+                cout << "Turn off the light...";
+            }
+                }
         
 
 
