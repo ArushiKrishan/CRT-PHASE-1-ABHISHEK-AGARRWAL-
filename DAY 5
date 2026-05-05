@@ -1,0 +1,134 @@
+// Problem-1 (pattern printing)
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+   
+    for(int i = 1; i <=n; i++) {
+        for(int j = 1; j <= i; j++) {
+            cout << " *";
+        }
+        cout << "\n";
+    }
+         for(int i=n-1; i>=1; i--){
+           for(int j=1; j<=i; j++){
+               cout << " *";
+           }
+           cout << "\n";
+    }
+       }
+
+// Problem-2 (function making practice)
+
+#include<iostream>
+using namespace std;
+
+void printMessage(){
+    cout << "Hi we are learning functions";
+}
+
+int main() {
+    printMessage();
+    return 0;
+}
+
+
+// Problem-3 (functions with some values and some return values)
+
+#include<iostream>
+using namespace std;
+
+int calculateArea(int length, int width){
+    return length*width;
+}
+
+int main() {
+    int a=10;
+    int b=7;
+    int area = calculateArea(a,b);
+    cout << area;
+}
+
+
+// Problem-4.1 (types of fuctions-no argument, no return values)
+
+#include<iostream>
+using namespace std;
+
+void bellRing(){
+    cout << "Ting tong...";
+}
+
+int main() {
+    bellRing();
+}
+
+
+// Problem-4.2 (types of fuctions argument, no return values)
+
+#include<iostream>
+using namespace std;
+
+void sendMessage(string message){
+    cout << message;
+}
+
+int main() {
+    sendMessage("BJP won!!!");
+}
+
+
+// Problem-4.3 (types of fuctions no argument, return values)
+
+#include<iostream>
+using namespace std;
+
+int ticketNumber(){
+    return 101;
+}
+
+int main() {
+    cout << ticketNumber();
+}
+
+
+// Problem-4.4 (types of fuctions  argument, return values)
+
+#include<iostream>
+using namespace std;
+
+int currencyConvert(int dollars){
+    return dollars*58;
+}
+
+int main() {
+    cout << currencyConvert(100);
+    return 0;
+}
+
+
+// Problem-5 (function overloading)
+
+#include<iostream>
+using namespace std;
+
+int add(int a, int b) {
+    return a + b;
+}
+int add(int a, int b, int c) {
+    return a + b + c;
+}
+
+float add(float a, float b, float c, float d) {
+    return a + b + c + d;
+}
+int main() {
+    cout << add(5,2) <<"\n";
+    cout << add(5,2,3) <<"\n";
+    cout << add(5.0,2.3,4.5);
+}
+        
+    
