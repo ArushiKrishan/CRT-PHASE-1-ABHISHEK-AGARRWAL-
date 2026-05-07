@@ -1,1 +1,65 @@
+// program 1 -- call by value and refrence
+
+#include <iostream>
+using namespace std;
+
+void updatebyValue(int a) {
+    a=500;
+}
+
+void updatebyRefrence(int &a) {
+      a=500;
+  }
+
+int main() {
+    int original=100;
+    updatebyValue(original);
+    cout << original << "\n";
+    updatebyRefrence(original);
+    cout << original;
+}
+
+/ program 2 -- Access Specifier--private
+
+#include <iostream>
+using namespace std;
+
+class BankAccount{
+private:    
+    int balance=5000;
+
+public:    
+void showbalance(){
+    cout << balance;
+}
+};
+int main() {
+    BankAccount obj1;
+    obj1.showbalance();
+}
+
+
+// program 3 -- Access Specifier--protected
+
+#include <iostream>
+using namespace std;
+
+class Parent{
+protected:    
+  int secretCode=1234;  
+};
+class child  : public Parent{
+    
+public:    
+void accessLocker(){
+        cout<<secretCode;
+    }
+};
+
+int main() {
+    child obj1;
+    obj1.accessLocker();
+}
+
+
 
