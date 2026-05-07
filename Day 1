@@ -1,0 +1,86 @@
+// Problem 1-- convert celcius to fahrenheit
+
+#include <iostream>
+using namespace std;
+
+int  main(){
+double celcius;
+double fahrenheit;
+cin >> celcius;
+
+fahrenheit=(celcius*9.0/5.0)+3.2;
+cout << fahrenheit << endl;
+return 0;
+}
+
+
+// Problem 2-- Local and global variable
+
+#include <iostream>
+using namespace std;
+
+int globalvariable=100;
+
+int  main(){
+int localvariable;
+int result;
+cin >> localvariable;
+
+result=(globalvariable/localvariable);
+cout << result << endl;
+return 0;
+}
+
+
+// Problem 3-- check wether a given side of triangle are equilateral or not 
+
+#include <iostream>
+using namespace std;
+
+int  main(){
+int side1, side2, side3;
+cin >>side1>>side2>>side3;
+
+bool isEqu =(side1>0) && (side1=side2) && (side2=side3);
+cout << isEqu << endl;
+return 0;
+}
+
+
+// Problem 4-- swapping of two variables
+
+#include <iostream>
+using namespace std;
+
+int  main(){
+int a, b;
+cin >> a >> b;
+
+int temp = a;
+a =b;
+b = temp;
+
+cout << a << "\n" << b <<endl;
+return 0;
+}
+
+
+// Problem 5-- Login credentials
+
+#include <iostream>
+using namespace std;
+
+int  main(){
+int userId = 1234;
+int userPassword = 1703;
+
+int inputId;
+int inputPassword;
+
+cin >> inputId >> inputPassword;
+
+bool isGranted = (userId == inputId) && (userPassword == inputPassword);
+cout<<"Access Granted"<<isGranted<<endl;
+cout<<"Access Denied"<<isGranted<<endl;
+return 0;
+}
