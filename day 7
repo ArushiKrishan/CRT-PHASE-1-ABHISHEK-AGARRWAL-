@@ -62,4 +62,32 @@ int main() {
 }
 
 
+// program 4 --constructor--parameterized constructor
+
+#include <iostream>
+using namespace std;
+
+class Student{
+ 
+ public:   
+    string name;
+    int age;
+    
+    Student(string studentName, int studentAge){
+        name=studentName;
+        age=studentAge;
+        
+    }
+    
+    void introduce() {
+        cout << "Hi there, this person name is " << name << " and her age is " << age << "\n";
+    }
+};
+
+int main() {
+    Student s1("Arushi", 20);
+   s1.introduce();
+}
+
+
 
