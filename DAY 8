@@ -1,0 +1,182 @@
+// problem 1 -- Types of Inheritance -- Single Inheritance
+
+#include <iostream>
+using namespace std;
+
+class Vehicle {
+    public:
+    void start() {
+        cout<<"Vehicle starts"<<"\n";
+    }
+};
+
+class Car : public Vehicle {
+    public:
+    void drive() {
+        cout<<"Car is running"<<"\n";
+    }
+};
+
+int main() {
+  Car obj1;
+  obj1.drive();
+  obj1.start();
+}
+
+
+// problem 2 -- Types of Inheritance -- Multi-level Inheritance
+
+#include <iostream>
+using namespace std;
+
+class Vehicle {
+    public:
+    void start() {
+        cout<<"Vehicle starts"<<"\n";
+    }
+};
+
+class Car : public Vehicle {
+    public:
+    void drive() {
+        cout<<"Car is running"<<"\n";
+    }
+};
+
+class speedOMeter : public Car {
+    public :
+    void speed() {
+        cout<<"Car is running at 60km/h"<<"\n";
+    }
+};
+
+int main() {
+  speedOMeter obj1;
+  obj1.start();
+  obj1.drive();
+  obj1.speed();
+}
+
+
+// problem 3 -- Types of Inheritance -- Hierarichal Inheritance
+
+#include <iostream>
+using namespace std;
+
+class Vehicle {
+    public:
+    void start() {
+        cout<<"Vehicle starts"<<"\n";
+    }
+};
+
+class bike : public Vehicle {
+    public:
+    void drive() {
+        cout<<"Bike is running"<<"\n";
+    }
+};
+
+class car : public Vehicle {
+    public :
+    void drive() {
+        cout<<"Car is running "<<"\n";
+    }
+};
+
+int main() {
+  car c;
+  bike b;
+  c.start();
+  c.drive();
+  b.start();
+  b.drive();
+}
+
+
+//  // problem 4 -- Types of Inheritance -- Multiple Inheritance
+
+  #include <iostream>
+  using namespace std;
+
+  class Mummy {
+      public:
+     void paiseDo() {
+          cout<<"Mummy paise dedo ghumne jana h...."<<"\n";
+      }
+  };
+
+  class Papa {
+      public:
+      void paiseDo() {
+          cout<<"Papa paise dedo books laani h...."<<"\n";
+      }
+  };
+
+  class Child :  public Mummy,  public Papa {
+   
+  };
+
+  int main() {
+   Child c;
+   c.paiseDo();
+ }
+ 
+==== no output
+
+// problem 5 -- Types of Inheritance -- hybrid Inheritance
+
+#include<iostream>
+using namespace std;
+
+class A {
+    public:
+    void print() {
+        cout << "Hi there...";
+    }
+};
+
+ class B : virtual public A {
+    // NO LOGIC
+};
+
+ class C : virtual public A {
+    // no logic
+};
+
+class D : public B, public C{
+    // NO LOGIC
+};
+
+int main() {
+    D obj1;
+    obj1.print();
+}
+
+
+// Problem-6 Encapsulation
+
+#include<iostream>
+using namespace std;
+
+class BankAccount {
+private:
+    int bankBalance;
+ public: 
+void setBalance(int amount) {
+        if(amount>=0){
+        bankBalance=amount;
+        }else{
+            cout<<"enter a valid amount";
+        }
+    }
+    int getBalance() {
+        return bankBalance;
+    }
+};
+
+int main() {
+    BankAccount obj1;
+    obj1.setBalance(5000);
+    cout<<obj1.getBalance();
+}
