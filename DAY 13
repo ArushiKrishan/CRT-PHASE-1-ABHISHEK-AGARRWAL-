@@ -1,5 +1,5 @@
 LEET CODE 
-70.
+70.(didn't run)
 
 class Solution {
 public:
@@ -19,3 +19,43 @@ int stairsClimb(int n){
         stairsClimb();
     }
 };
+
+
+// RECURSION--FIND NO. OF POSSIBLE COMBINATION
+
+#include <iostream>
+using namespace std;
+
+ int combos(int n) {
+     // base condition
+     if(n==0) {
+         return 1;
+     }
+     if(n==1) {
+         return 2;
+     }
+     //logic
+     return combos(n-1)+combos(n-2);
+ }
+int main() {
+    cout<<combos(3);
+}
+
+
+// RECURSION--FIND NO. OF POSSIBLE COMBINATION of number of columns
+
+#include <iostream>
+using namespace std;
+
+ int recursion(int n) {
+     // base condition
+     if(n<4) {
+         return 1;
+     }
+     
+     //logic
+     return recursion(n-4)+recursion(n-1);
+ }
+int main() {
+    cout<<recursion(4);
+}
